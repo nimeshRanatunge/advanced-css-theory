@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- 
+:hover
+:focus
+:nth-child(1) - first one
+:last-element
+
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+
+<style>
+    ul li:nth-child(2n) {
+    background-color: black;
+    color: white;
+}
+
+li:hover {
+    color: green !important;
+    background: red !important;
+}
+
+#banner {
+   color: purple;
+   background-color: white;
+}
+
+#banner::before {
+    content: 'Hello this is a pseudo element ';
+    color: chocolate;
+    background-color: aqua;
+    width: 200px !important;
+    height: 100px !important;
+    display: block;
+}
+
+.low::first-letter {
+    text-transform: lowercase;
+    color: white;
+}
+
+/* input:focus + #banner {
+    display: block;
+} */
+
+:root {
+    background-color: palegoldenrod;
+}
+
+#fc::before{
+    content: 'hey there ';
+}
+#fc:hover::before{
+    color: rebeccapurple;
+    content: 'is this changed';
+}
+#li::before{
+    content: 'hey hey ';
+}
+#li:hover::before{
+    content: 'new content ';
+    color: blue;
+}
+</style>
+
+</head>
+<body>
+    <div>
+        <h1 id="fc">About me</h1>
+        <p>my name is <b>Nimesh</b></p>
+        <input type="text">
+        <div id="banner">I am visible?</div>
+        <p>
+            my Favourite langauges
+            <ul>
+                <li class="low">HTML</li>
+                <li id="li">CSS</li>
+                <li>JS</li>
+                <li>React</li>
+                <li>NodeJS</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>React</li>
+                <li>NodeJS</li>
+            </ul>
+        </p>
+    </div>
+</body>
+</html>

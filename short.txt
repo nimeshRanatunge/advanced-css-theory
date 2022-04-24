@@ -1,0 +1,46 @@
+logical tag vs physical tag - <b></b> vs <strong></strong>
+html entities eg: &nbsp;
+box model : box-sizing: border-box; -> height/width includes margin.padding.border
+
+vw - view width
+----------------sizes-tutorial-----------------
+rem -	Relative to font-size of the root element,
+The rem unit sets the font-size relative to the browsers base font-size, and will not inherit from its parents.
+not size change with device
+
+vw - 	Relative to 1% of the width of the viewport*
+The viewport is the user's visible area of a web page. The viewport varies with the device, 
+and will be smaller on a mobile phone than on a computer screen.
+size changes with device
+
+em - depends on parent element
+
+2vmax - changes with device but not getting smaller than 2vw
+2vmin - changes with device but not getting larger than 2vw
+
+-------------------- Combinators ----------------------------------
++ used to notify adjacent sibling (not the inside case)
+input:focus + #banner {
+    display: block;
+}
+
+The following example selects all <p> elements inside <div> elements: 
+div p {
+  background-color: yellow;
+}
+
+The following example selects all <p> elements that are children of a <div> element: (child selector)
+div > p {
+  background-color: yellow;
+}
+
+The general sibling selector selects all elements that are next siblings of a specified element.
+The following example selects all <p> elements that are next siblings of <div> elements: 
+div ~ p {
+  background-color: yellow;
+}
+
+----------------------------------------------------------------------
+pseudo elements working with opening and closing elements
+: pseudo selectors
+::pseudo elements
